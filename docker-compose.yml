@@ -1,0 +1,20 @@
+version: '3'
+services:
+  flare:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - ollama
+    environment:
+      - LLM_MODEL=tinyllama
+      - AI_NAME=Flare
+      - USER_NAME=Valerio
+      - MAX_MEMORY=10
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ./ollama_data:/root/.ollama
+    container_name: ollama

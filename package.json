@@ -1,0 +1,16 @@
+{
+  "name": "flare-ai-bestie",
+  "version": "1.0.0",
+  "description": "Your AI WhatsApp Bestie",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "view-memory": "node memory/viewer.js"
+  },
+  "dependencies": {
+    "@adiwajshing/baileys": "^4.4.0",
+    "better-sqlite3": "^12.2.0",
+    "express": "^4.18.2",
+    "ollama": "^0.5.16"
+  }
+}
